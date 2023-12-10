@@ -1,0 +1,18 @@
+Sequential results:
+Here are the cities:  URL: https://en.wikipedia.org/wiki/Detroit
+Here are the cities:  URL: https://en.wikipedia.org/wiki/Seoul
+Here are the cities:  URL: https://en.wikipedia.org/wiki/Paris
+Here are the cities:  URL: https://en.wikipedia.org/wiki/Manila
+Time:  254.7387ms
+
+Here are the cities:  URL: https://en.wikipedia.org/wiki/Detroit
+Here are the cities:  URL: https://en.wikipedia.org/wiki/Seoul
+Here are the cities:  URL: https://en.wikipedia.org/wiki/Paris
+Here are the cities:  URL: https://en.wikipedia.org/wiki/Manila
+Time:  239.2891ms
+
+I changed the code to give urls.
+
+
+Here are the concurrent results:
+
