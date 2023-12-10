@@ -15,4 +15,27 @@ I changed the code to give urls.
 
 
 Here are the concurrent results:
+City: Paris
+City: Detroit
+City: Manila
+City: Seoul
+Time:  169.9736ms
 
+City: Manila
+City: Detroit
+City: Paris
+City: Seoul
+Time:  172.2403ms
+
+(Interestingly manilla got destroyed)
+City: Seoul
+City: Paris
+City: Detroit
+Time:  178.2872ms
+
+(idk whats going on here)
+City: Seoul
+City: Paris
+City: Detroit
+City: Manila
+Time:  935.6965ms

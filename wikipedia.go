@@ -41,29 +41,27 @@ func main() {
 
 	cities := []string{"Detroit", "Seoul", "Paris", "Manila"}
 
-	//ch := make(chan string)
-	//var wg sync.WaitGroup
+	ch := make(chan string)
+	var wg sync.WaitGroup
 
 	for _, city := range cities {
-		data := fetchWiki(city)
-		fmt.Println("Here are the cities: ", data)
 
 		// WHY?: can we call a function on an object that
 		//       was declared, but not defined
-		//wg.Add(1)
-		//go fetchWikiAsync(city, ch, &wg)
+		wg.Add(1)
+		go fetchWikiAsync(city, ch, &wg)
 	}
 
 	// WHY?: do we call the the waitgroup wait in its own thread
 	// we need to wait for all the goroutines to finish before we close them all
-	//go func() {
-	//	wg.Wait()
-	//		close(ch)
-	//}()
+	go func() {
+		wg.Wait()
+		close(ch)
+	}()
 
-	//	for result := range ch {
-	//	fmt.Println(result)
-	//}
+	for result := range ch {
+		fmt.Println(result)
+	}
 
 	fmt.Println("Time: ", time.Since(start))
 }
